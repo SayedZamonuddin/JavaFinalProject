@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.name.YourControllerClass">
+    <top>
+        <Label text="Expense Tracker" />
+    </top>
+    <left>
+        <VBox spacing="10">
+            <Label text="Add Expense" />
+            <HBox spacing="10">
+                <Label text="Amount:" />
+                <TextField fx:id="amountField" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Date:" />
+                <DatePicker fx:id="datePicker" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Category:" />
+                <ComboBox fx:id="categoryComboBox" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Description:" />
+                <TextField fx:id="descriptionField" />
+            </HBox>
+            <Button text="Add" fx:id="addButton" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="10">
+            <Label text="Expense List" />
+            <ListView fx:id="expenseListView" />
+        </VBox>
+    </center>
+    <right>
+        <VBox spacing="10">
+            <Label text="Budget" />
+            <HBox spacing="10">
+                <Label text="Category:" />
+                <ComboBox fx:id="budgetCategoryComboBox" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Amount:" />
+                <TextField fx:id="budgetAmountField" />
+            </HBox>
+            <Button text="Set Budget" fx:id="setBudgetButton" />
+        </VBox>
+    </right>
+    <bottom>
+        <VBox spacing="10">
+            <Button text="Generate Report" fx:id="generateReportButton" />
+        </VBox>
+    </bottom>
+</BorderPane>
+
